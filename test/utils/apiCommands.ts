@@ -10,10 +10,10 @@ export async function createUser(user: User): Promise<void> {
 }
 
 export async function getUser(userId: number): Promise<User> {
-    const response = await axios.get(`https://jsonplaceholder.typicode.com/${userId}`);
+    const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`);
     return response.data;
 }
 
 export async function deleteUser(userId: number): Promise<void> {
-    await axios.delete(`https://jsonplaceholder.typicode.com/${userId}`);
+    await axios.delete(`https://jsonplaceholder.typicode.com/users/${userId}`);
 }
